@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.28010.2046
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29424.173
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiApp", "MultiApp.csproj", "{32989C79-A39A-4F0A-BC4A-CB206C27549D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiAppRevamped", "..\MultiAppRevamped\MultiAppRevamped.csproj", "{B80D9808-293A-4BB9-AFAB-5D49CC6407EC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MultiAppRevampedTests", "..\MultiAppRevampedTests\MultiAppRevampedTests.csproj", "{1D7774C7-2622-4F16-815E-26B5E7518044}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{32989C79-A39A-4F0A-BC4A-CB206C27549D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32989C79-A39A-4F0A-BC4A-CB206C27549D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32989C79-A39A-4F0A-BC4A-CB206C27549D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B80D9808-293A-4BB9-AFAB-5D49CC6407EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B80D9808-293A-4BB9-AFAB-5D49CC6407EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B80D9808-293A-4BB9-AFAB-5D49CC6407EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B80D9808-293A-4BB9-AFAB-5D49CC6407EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D7774C7-2622-4F16-815E-26B5E7518044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D7774C7-2622-4F16-815E-26B5E7518044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D7774C7-2622-4F16-815E-26B5E7518044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D7774C7-2622-4F16-815E-26B5E7518044}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,18 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MultiApp
 {
-    class BoardGame
+    internal class BoardGame
     {
         public string BoardGameTitle { get; set; }
-
         public string BoardGameCategory { get; set; }
-
         public int BoardGameYear { get; set; }
 
         public override string ToString()

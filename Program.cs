@@ -1,9 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
 
@@ -16,11 +11,9 @@ namespace MultiApp
         {            
             bool displayMenu = true;
             while (displayMenu)
-                
             {
                 displayMenu = MainMenu();
             }
-
         }
         
         private static bool MainMenu()
@@ -43,7 +36,6 @@ namespace MultiApp
                 Lists();
                 return true;
             }
-
             else if (result == "3")
             {
                 Calculator();
@@ -59,7 +51,6 @@ namespace MultiApp
             {
                 return true;
             }
-
         }
 
         private static void NumbersGame()
@@ -90,7 +81,7 @@ namespace MultiApp
                 }                
             }           
         }
-
+        
         private static bool Lists()
         {
             Console.Clear();
@@ -119,7 +110,6 @@ namespace MultiApp
             {
                 return false;
             }
-            
         }
         private static void Calculator()
         {
@@ -127,30 +117,27 @@ namespace MultiApp
             Console.WriteLine("Write a mathematical problem using +, -, * or /");
             string expression = Console.ReadLine();
             string pattern = @"(\d*(?:.\d{1,*})?)\s*([-+*/])\s*(\d*(?:.\d{1,*})?)";
-                foreach (Match m in Regex.Matches(expression, pattern))
+            foreach (Match m in Regex.Matches(expression, pattern))
+            {
+                decimal value1 = decimal.Parse(m.Groups[1].Value);
+                decimal value2 = decimal.Parse(m.Groups[3].Value);
+                switch (m.Groups[2].Value)
                 {
-                    decimal value1 = decimal.Parse(m.Groups[1].Value);
-                    decimal value2 = decimal.Parse(m.Groups[3].Value);
-                    switch (m.Groups[2].Value)
-                    {
-                        case "+":
-                            Console.WriteLine("{0} = {1:N2}", m.Value, value1 + value2);
-                            break;
-                        case "-":
-                            Console.WriteLine("{0} = {1:N2}", m.Value, value1 - value2);
-                            break;
-                        case "*":
-                            Console.WriteLine("{0} = {1:N2}", m.Value, value1 * value2);
-                            break;
-                        case "/":
-                            Console.WriteLine("{0} = {1:N2}", m.Value, value1 / value2);
-                            break;
-                    }
-                    Console.ReadLine();
+                    case "+":
+                        Console.WriteLine("{0} = {1:N2}", m.Value, value1 + value2);
+                        break;
+                    case "-":
+                        Console.WriteLine("{0} = {1:N2}", m.Value, value1 - value2);
+                        break;
+                    case "*":
+                        Console.WriteLine("{0} = {1:N2}", m.Value, value1 * value2);
+                        break;
+                    case "/":
+                        Console.WriteLine("{0} = {1:N2}", m.Value, value1 / value2);
+                        break;
                 }
+                Console.ReadLine();
+            }
         }
-
-
     }
-
 }

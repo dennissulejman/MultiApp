@@ -1,13 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MultiApp
 {
-    class Car
+    internal class Car
     {
         public string CarMake { get; set; }
 
@@ -19,8 +17,7 @@ namespace MultiApp
 
         public override string ToString()
         {
-            return "Make: " + CarMake + "Model: " + CarModel
-            + "Color: " + CarColor + "Year: " + CarYear;
+            return "Make: " + CarMake + "Model: " + CarModel + "Color: " + CarColor + "Year: " + CarYear;
         }
 
         public static void ListMethod()
@@ -40,8 +37,12 @@ namespace MultiApp
                 int year = int.Parse(Console.ReadLine());
 
                 myCars.Add(new Car()
-                { CarMake = make + ", ", CarModel = model + ", ",
-                CarColor = color + ", ", CarYear = year});
+                { 
+                    CarMake = make + ", ", 
+                    CarModel = model + ", ", 
+                    CarColor = color + ", ", 
+                    CarYear = year
+                });
 
                 Console.WriteLine("Add another car?(Y/N)");
                 string response = Console.ReadLine();

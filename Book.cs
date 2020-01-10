@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace MultiApp
 {
-    class Book
+    internal class Book
     {
-        public string BookTitle { get; set; }
-        public int BookYear { get; set; }
+        public string Title { get; set; }
+        public int ReleaseYear { get; set; }
         public override string ToString()
         {
-            return "Title: " + BookTitle + "Year: " + BookYear;
+            return "Title: " + Title + "Year: " + ReleaseYear;
         }
         public static void ListMethod()
         {
@@ -26,7 +24,7 @@ namespace MultiApp
                 string title = Console.ReadLine();
                 Console.WriteLine("Which year did it come out?");
                 int year = int.Parse(Console.ReadLine());
-                myBooks.Add(new Book() { BookTitle = title + ", ", BookYear = year });
+                myBooks.Add(new Book() { Title = title + ", ", ReleaseYear = year });
 
                 Console.WriteLine("Add another book?(Y/N)");
                 string response = Console.ReadLine();
